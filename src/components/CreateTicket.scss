@@ -1,0 +1,51 @@
+.create-ticket-modal {
+  button {
+    background-color: #ff5722 !important;
+    color: #ffffff !important;
+    font-size: 1.3em !important;
+    width: 16rem;
+    height: 3rem;
+    padding: 0 !important;
+    border-radius: 50px !important;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+    background: #e0f7fa !important;
+    .header {
+      font-size: 1.4rem;
+      text-align: center;
+      color: #ff5722 !important;
+    }
+  
+    .tickets {
+      .ticket {
+        height: 40px;
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 50px 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .name {
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+  
+        &:hover {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+  
+    .actions {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
