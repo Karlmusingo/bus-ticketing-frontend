@@ -1,0 +1,174 @@
+.app-container {
+  padding: 50px 120px 100px 120px;
+
+  button {
+    background-color: #ff5722 !important;
+    color: #ffffff !important;
+    font-size: 1.3em !important;
+    width: 16rem;
+    height: 3rem;
+    padding: 0 !important;
+    border-radius: 50px !important;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+  .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 80px 0;
+
+    .app-title {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+  }
+
+  .color {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .bus-schedule {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px; 
+
+    .bus-tracker {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #285bab;
+      padding: 30px;
+
+      .station {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tracker-label {
+        font-size: 2rem;
+      }
+
+      .tracker-station {
+        display: flex;
+        align-items: center;
+
+        .tracker {
+          height: 20px;
+          background-color: wheat;
+          width: 250px;
+          margin-top: -20px;
+
+          .tracker-bar {
+            height: 100%;
+          }
+        }
+
+        .color {
+          width: 50px;
+          height: 50px;
+        }
+
+        .station-a {
+          .color {
+            background-color: #fcfbfb;
+          }
+        }
+        .station-b {
+          .color {
+            background-color: #b71c1c;
+          }
+        }
+      }
+    }
+
+    .labels {
+      .label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        .label-text {
+          margin-left: 25px;
+          font-size: 1.2rem;
+        }
+
+        .label-green {
+          background-color: #1b5e20;
+        }
+
+        .label-yellow {
+          background-color: #ffc400;
+        }
+
+        .label-red {
+          background-color: #b71c1c;
+        }
+
+        .label-white {
+          background-color: #fcfbfb;
+        }
+      }
+    }
+  }
+
+  .app-footer {
+    margin: 70px auto 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 925px) {
+  .app-container {
+    padding: 50px 30px 100px 30px;
+    .app-header {
+      padding: 20px 0 80px 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .app-container {
+    padding: 50px 0px 100px 0px;
+    .app-header {
+      flex-direction: column;
+      padding: 20px 0 80px 0;
+
+      .app-title {
+        font-size: 2.7rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .bus-schedule{
+      flex-direction: column;
+      align-items: center;
+
+      .bus-tracker{
+        padding: 30px 10px;
+        margin-bottom: 30px;
+        .tracker-station{
+          .tracker {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}

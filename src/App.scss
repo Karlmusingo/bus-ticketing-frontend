@@ -1,5 +1,14 @@
+body {
+  background-color: #0d47a1;
+}
 .App {
-  text-align: center;
+  color: #ffffff;
+}
+
+input {
+  &:focus {
+    border: 1px solid #ff5722 !important;
+  }
 }
 
 .App-logo {
@@ -11,17 +20,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {

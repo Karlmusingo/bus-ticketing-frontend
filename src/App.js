@@ -1,20 +1,18 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import initSocketIOClient from "./socketIO";
+import React from "react";
+import "./App.scss";
+import App from "./components";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function App() {
-  const [text, setText] = useState("Hello from Bus Ticketing App");
-
-  initSocketIOClient();
+function Container() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{text}</p>
-      </header>
-    </div>
+    <>
+      <ToastContainer position={toast.POSITION.TOP_RIGHT} />
+      <div className="App">
+        <App />
+      </div>
+    </>
   );
 }
 
-export default App;
+export default Container;

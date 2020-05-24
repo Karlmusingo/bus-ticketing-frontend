@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { CONNECTED, DEPARTURE, ARRIVAL, INTHEMIDDLE } from "./events";
 import socketIOClient from "./socketIOClient";
 
-export default () => {
+export default (updateTracker) => {
   useEffect(() => {
     socketIOClient.on(CONNECTED, () => {
       console.log("User connected");
@@ -17,6 +17,7 @@ export default () => {
   useEffect(() => {
     socketIOClient.on(DEPARTURE, () => {
       console.log("User DEPARTURE");
+      updateTracker(0);
     });
 
     return () => {
@@ -27,6 +28,7 @@ export default () => {
   useEffect(() => {
     socketIOClient.on(ARRIVAL, () => {
       console.log("User ARRIVAL");
+      updateTracker(100);
     });
 
     return () => {
@@ -37,8 +39,8 @@ export default () => {
   useEffect(() => {
     socketIOClient.on(INTHEMIDDLE, (data) => {
       console.log("User INTHEMIDDLE", data);
+      updateTracker(data.time);
     });
-
     return () => {
       socketIOClient.off(INTHEMIDDLE);
     };
