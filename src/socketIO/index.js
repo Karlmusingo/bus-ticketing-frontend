@@ -16,7 +16,7 @@ export default (updateTracker) => {
 
   useEffect(() => {
     socketIOClient.on(DEPARTURE, () => {
-      console.log("User DEPARTURE");
+      console.log("User DEPARTURE", new Date());
       updateTracker(0);
     });
 
@@ -27,7 +27,7 @@ export default (updateTracker) => {
 
   useEffect(() => {
     socketIOClient.on(ARRIVAL, () => {
-      console.log("User ARRIVAL");
+      console.log("User ARRIVAL", new Date());
       updateTracker(100);
     });
 
